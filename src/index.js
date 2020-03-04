@@ -5,7 +5,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
-import RootReducer from './store/reducers/rootReducer';
+import rootReducer from './store/reducers/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
@@ -18,9 +18,9 @@ const composeEnhancers =
     : compose;
 
 const store = createStore(
-  RootReducer,
+  rootReducer,
   composeEnhancers(
-    applyMiddleware(thunk.withExtraArgument({ getFirestore, getFirebase })),
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
     reduxFirestore(fbConfig),
     reactReduxFirebase(fbConfig)
   )

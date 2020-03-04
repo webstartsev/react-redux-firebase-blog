@@ -11,7 +11,7 @@ const FIREBASE_MESSAGING_SENDER_ID = process.env.REACT_APP_FIREBASE_MESSAGING_SE
 const FIREBASE_APP_ID = process.env.REACT_APP_FIREBASE_APP_ID;
 const FIREBASE_MEASUREMENT_ID = process.env.REACT_APP_FIREBASE_MEASUREMENT_ID;
 
-var config = {
+const config = {
   apiKey: FIREBASE_API_KEY,
   authDomain: FIREBASE_AUTH_DOMAIN,
   databaseURL: FIREBASE_DATABASE_URL,
@@ -23,7 +23,6 @@ var config = {
 };
 // Initialize Firebase
 firebase.initializeApp(config);
-firebase.analytics();
-firebase.firestore().settings({ timestampsInSnapshots: true });
+firebase.firestore();
 
 export default firebase;
