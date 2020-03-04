@@ -1,3 +1,5 @@
+import TYPE_ACTION from '../actions/typeActions';
+
 const initialState = {
   posts: [
     { id: '1', title: 'React Redux Firebase - is awesome!', content: 'Всем привет!!!' },
@@ -8,6 +10,9 @@ const initialState = {
 
 const postReducer = (state = initialState, action) => {
   switch (action.type) {
+    case TYPE_ACTION.CREATE_POST:
+      console.log(action.post);
+      return state;
     default:
       return state;
   }
