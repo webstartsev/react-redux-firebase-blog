@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlogDetail = props => {
+const PostDetail = props => {
   const id = props.match.params.id;
 
   return (
@@ -19,4 +19,4 @@ const BlogDetail = props => {
   );
 };
 
-export default BlogDetail;
+export default PostDetail;

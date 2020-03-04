@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CreateBlog extends Component {
+class CreatePost extends Component {
   state = {
     title: '',
     content: ''
@@ -46,4 +46,4 @@ class CreateBlog extends Component {
   }
 }
 
-export default CreateBlog;
+export default CreatePost;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlogItem = () => {
+const PostItem = () => {
   return (
     <div className="card z-depth-0 project-summary">
       <div className="card-content gret-text text-darken-3">
@@ -12,4 +12,4 @@ const BlogItem = () => {
   );
 };
 
-export default BlogItem;
+export default PostItem;
