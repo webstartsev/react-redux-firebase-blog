@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const links = [
-  { to: `/`, label: `Новая статья`, exact: false },
+  { to: `/create`, label: `Новая статья`, exact: false },
   { to: `/`, label: `Список`, exact: false },
-  { to: `/`, label: `Войти`, exact: false },
-  { to: `/`, label: `Регистрация`, exact: false }
+  { to: `/signin`, label: `Войти`, exact: false },
+  { to: `/signup`, label: `Регистрация`, exact: false }
 ];
 
 const renderLinks = links => {
