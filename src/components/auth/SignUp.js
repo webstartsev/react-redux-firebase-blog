@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-class SingIn extends Component {
+class SingUp extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    firstName: '',
+    lastName: ''
   };
 
   handlerSubmit = e => {
@@ -32,7 +34,15 @@ class SingIn extends Component {
               <input type="password" id="password" onChange={this.handlerChange} />
             </div>
             <div className="input-field">
-              <button className="btn pink lighten-1 z-depth-0">Войти</button>
+              <label htmlFor="firstName">Имя</label>
+              <input type="text" id="firstName" onChange={this.handlerChange} />
+            </div>
+            <div className="input-field">
+              <label htmlFor="lastName">Фамилия</label>
+              <input type="text" id="lastName" onChange={this.handlerChange} />
+            </div>
+            <div className="input-field">
+              <button className="btn pink lighten-1 z-depth-0">Регистрация</button>
             </div>
           </form>
         </div>
@@ -41,4 +51,4 @@ class SingIn extends Component {
   }
 }
 
-export default SingIn;
+export default SingUp;
