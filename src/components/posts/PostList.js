@@ -1,13 +1,10 @@
 import React from 'react';
 import PostItem from './PostItem';
 
-const PostList = () => {
+const PostList = ({ posts }) => {
   return (
     <div className="project-list section">
-      <PostItem />
-      <PostItem />
-      <PostItem />
-      <PostItem />
+      {posts && posts.map(post => <PostItem key={post.id} post={post} />)}
     </div>
   );
 };
