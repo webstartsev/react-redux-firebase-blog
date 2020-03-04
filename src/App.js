@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import BlogDetail from './components/blogs/BlogDetail';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
+import CreateBlog from './components/blogs/CreateBlog';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/post/:id" component={BlogDetail} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/create" component={CreateBlog} />
         <Redirect to="/" />
       </Switch>
     </div>
