@@ -13,6 +13,9 @@ const postReducer = (state = initialState, action) => {
     case TYPE_ACTION.CREATE_POST:
       console.log(action.post);
       return state;
+    case TYPE_ACTION.CREATE_POST_ERROR:
+      console.log('ошибка создания поста', action.err);
+      return state;
     default:
       return state;
   }
