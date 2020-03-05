@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class SingUp extends Component {
   state = {
@@ -20,6 +22,9 @@ class SingUp extends Component {
   };
 
   render() {
+    const { auth } = this.props;
+    if (auth.uid) return <Redirect to="/" />;
+
     return (
       <div className="container">
         <div className="row">
@@ -51,4 +56,10 @@ class SingUp extends Component {
   }
 }
 
-export default SingUp;
+const mapStateToProps = state => {
+  return {
+    auth: state.firebase.auth
+  };
+};
+
+export default connect(mapStateToProps)(SingUp);
