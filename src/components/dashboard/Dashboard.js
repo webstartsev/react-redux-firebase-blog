@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import Notifications from './Notifications';
 import PostList from '../posts/PostList';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { firestoreConnect } from 'react-redux-firebase';
 
 class Dashboard extends Component {
   render() {
     const { posts } = this.props;
-    console.log('posts: ', posts);
     return (
       <div className="dashboard container">
         <div className="row">
@@ -24,8 +25,11 @@ class Dashboard extends Component {
 
 const mapStateToProps = state => {
   return {
-    posts: state.post.posts
+    posts: state.firestore.ordered.posts
   };
 };
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([{ collection: 'posts' }])
+)(Dashboard);

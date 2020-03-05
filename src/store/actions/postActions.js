@@ -1,8 +1,8 @@
 import TYPE_ACTION from './typeActions';
 
 export const createPost = post => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
-    const firestore = getFirestore();
+  return (dispatch, getState, getFirebase) => {
+    const firestore = getFirebase().firestore();
     firestore
       .collection('posts')
       .add({
