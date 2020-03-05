@@ -16,6 +16,9 @@ const authReducer = (state = initialState, action) => {
         ...state,
         authError: 'Ошибка авторизации'
       };
+    case TYPE_ACTIONS.SIGNOUT_SUCCESS:
+      console.log(`signout success`);
+      return state;
     default:
       return state;
   }
