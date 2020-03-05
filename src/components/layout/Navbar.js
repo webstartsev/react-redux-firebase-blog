@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavLink from './NavLinks';
+import SignOutLinks from './SignOutLinks';
+import SignInLinks from './SignInLinks';
+import { connect } from 'react-redux';
 
 const NavBar = () => {
   return (
@@ -9,10 +11,16 @@ const NavBar = () => {
         <Link to="/" className="brand-logo">
           Super Blog
         </Link>
-        <NavLink />
+        <SignInLinks />
+        <SignOutLinks />
       </div>
     </nav>
   );
 };
 
-export default NavBar;
+const mapStateToProps = state => {
+  console.log('state: ', state);
+  return {};
+};
+
+export default connect(mapStateToProps)(NavBar);
