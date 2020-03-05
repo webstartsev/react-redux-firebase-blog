@@ -16,7 +16,7 @@ const SignOutLinks = props => {
       </li>
       <li>
         <NavLink to="/" className="btn btn-floating pink lighten-1">
-          SA
+          {props.profile.initial}
         </NavLink>
       </li>
     </ul>
