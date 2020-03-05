@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const links = [
   { to: `/create`, label: `Новая статья`, exact: false },
@@ -31,4 +32,8 @@ const NavLinks = () => {
   );
 };
 
-export default NavLinks;
+const mapStateToProps = state => {
+  return {};
+};
+
+export default connect(mapStateToProps)(NavLinks);
