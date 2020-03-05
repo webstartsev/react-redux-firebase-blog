@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 const PostItem = ({ post }) => {
   return (
@@ -8,7 +9,7 @@ const PostItem = ({ post }) => {
         <p>
           Автор: {post.authorFirstName} {post.authorLastName}
         </p>
-        <p className="grey-text">04.03.2019 15:46</p>
+        <p className="grey-text">{moment(post.createAt.toDate()).calendar()}</p>
       </div>
     </div>
   );
